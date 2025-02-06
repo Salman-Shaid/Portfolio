@@ -53,8 +53,8 @@ const Projects = () => {
                 navigation={true}
                 spaceBetween={30}
                 breakpoints={{
-                    0: { slidesPerView: 1 },   // Show 1 card on small screens
-                    768: { slidesPerView: 2 }, // Show 2 cards on larger screens
+                    0: { slidesPerView: 1 },   
+                    768: { slidesPerView: 2 },
                 }}
                 className='w-full'
             >
@@ -86,7 +86,7 @@ const Projects = () => {
                                         <span className='px-2'>GitHub</span>
                                     </a>
 
-                                    {/* Live Site Button */}
+                                 
                                     <a
                                         href={project.liveSite}
                                         target='_blank'
