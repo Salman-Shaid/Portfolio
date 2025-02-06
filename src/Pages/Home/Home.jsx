@@ -8,7 +8,6 @@ import Stats from './Stats/Stats';
 
 const Home = () => {
    
-    const contactRef = useRef(null);
 
     return (
         <div>
