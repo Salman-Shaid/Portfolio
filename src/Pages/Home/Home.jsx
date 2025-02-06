@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+
 import Banner from './Banner/Banner';
 import AboutMe from './AboutMe/AboutMe';
 import Projects from './Projects/Projects';
@@ -7,8 +7,8 @@ import Contact from './Contact/Contact';
 import Stats from './Stats/Stats';
 
 const Home = () => {
-    // Create a ref for the Contact section
-    const contactRef = useRef(null);
+   
+    
 
     return (
         <div>

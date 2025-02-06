@@ -32,7 +32,7 @@ const Navbar = () => {
                     <a href="/" className="btn btn-ghost text-xl text-white">Salman</a>
                 </div>
 
-              \
+            
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
                         {["home", "skills", "about", "projects", "contact"].map((section, index) => (

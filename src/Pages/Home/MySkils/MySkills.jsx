@@ -34,9 +34,9 @@ const MySkills = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {/* Card 1: Frontend Development */}
+                
                 <div className="group card bg-[#252734] text-white shadow-xl p-12 relative overflow-hidden transition-transform transform hover:scale-105">
-                    <div className="card-body z-10"> {/* Added z-index to make sure content stays above background */}
+                    <div className="card-body z-10"> 
                         <h2 className="my-8"><FaLaptopCode size={90} className="group-hover:text-teal-500 transition-colors duration-300" /></h2>
                         <h2 className="text-3xl font-semibold mb-4">Frontend Development</h2>
                         <div className="flex flex-col gap-6">
@@ -62,14 +62,14 @@ const MySkills = () => {
                             </div>
                         </div>
                     </div>
-                    {/* Background Image */}
+                   
                     <div
                         className="absolute top-0 left-0 w-full h-full bg-cover bg-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0"
                         style={{ backgroundImage: `url(${cardBg})` }}
                     ></div>
                 </div>
 
-                {/* Card 2: Backend Development */}
+        
                 <div className="group card bg-[#252734] text-white shadow-xl p-12 relative overflow-hidden transition-transform transform hover:scale-105">
                     <div className="card-body z-10">
                         <h2 className="my-8"><FaCode size={80} className="group-hover:text-purple-500 transition-colors duration-300" /></h2>
@@ -100,7 +100,7 @@ const MySkills = () => {
                     ></div>
                 </div>
 
-                {/* Card 3: Version Control & Tools */}
+               
                 <div className="group card bg-[#252734] text-white shadow-xl p-12 relative overflow-hidden transition-transform transform hover:scale-105">
                     <div className="card-body z-10">
                         <h2 className="my-8"><BsTools size={70} className="group-hover:text-indigo-500 transition-colors duration-300" /></h2>
@@ -120,7 +120,7 @@ const MySkills = () => {
                             </div>
                         </div>
                     </div>
-                    {/* Background Image */}
+                
                     <div
                         className="absolute top-0 left-0 w-full h-full bg-cover bg-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0"
                         style={{ backgroundImage: `url(${cardBg})` }}
