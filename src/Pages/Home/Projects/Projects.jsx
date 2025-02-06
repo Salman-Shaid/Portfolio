@@ -73,9 +73,9 @@ const Projects = () => {
                                 <h3 className='text-3xl font-semibold mb-4'>{project.subtitle}</h3>
                                 <p className='mb-6'>{project.description}</p>
                                 
-                                {/* Buttons Section */}
+                               
                                 <div className="flex flex-col sm:flex-row gap-4">
-                                    {/* GitHub Button */}
+                                   
                                     <a
                                         href={project.github}
                                         target='_blank'
