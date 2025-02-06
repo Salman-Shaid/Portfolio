@@ -5,10 +5,10 @@ const Navbar = () => {
     const [activeSection, setActiveSection] = useState("home");
 
     useEffect(() => {
-        // Initialize scrollSpy to detect section in view
+        
         scrollSpy.update();
 
-        // Listen for scroll events from react-scroll to update active section on scroll
+     
         Events.scrollEvent.register("begin", (to) => {
             setActiveSection(to);
         });
@@ -17,7 +17,7 @@ const Navbar = () => {
             setActiveSection(to);
         });
 
-        // Cleanup listeners on unmount
+       
         return () => {
             Events.scrollEvent.remove("begin");
             Events.scrollEvent.remove("end");
@@ -27,12 +27,12 @@ const Navbar = () => {
     return (
         <div className="bg-[#252734] fixed top-0 left-0 right-0 z-10">
             <div className="navbar container mx-auto">
-                {/* Logo */}
+                
                 <div className="navbar-start">
                     <a href="/" className="btn btn-ghost text-xl text-white">Salman</a>
                 </div>
 
-                {/* Navigation Links */}
+              \
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
                         {["home", "skills", "about", "projects", "contact"].map((section, index) => (
@@ -42,7 +42,7 @@ const Navbar = () => {
                                     smooth={true}
                                     duration={500}
                                     offset={-70}
-                                    spy={true} // Detect active section during scroll
+                                    spy={true} 
                                     className={`text-white hover:text-gray-400 cursor-pointer pb-1 ${
                                         activeSection === section ? "border-b-2 border-blue-400" : ""
                                     }`}
@@ -54,7 +54,7 @@ const Navbar = () => {
                     </ul>
                 </div>
 
-                {/* Hire Me Button */}
+              
                 <div className="navbar-end">
                     <Link to="contact" smooth={true} duration={500} offset={-70} spy={true}>
                         <button
