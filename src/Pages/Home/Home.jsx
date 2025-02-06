@@ -1,4 +1,4 @@
-
+import React, { useRef } from 'react';
 import Banner from './Banner/Banner';
 import AboutMe from './AboutMe/AboutMe';
 import Projects from './Projects/Projects';
@@ -8,7 +8,7 @@ import Stats from './Stats/Stats';
 
 const Home = () => {
    
-    
+    const contactRef = useRef(null);
 
     return (
         <div>
