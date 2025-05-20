@@ -5,6 +5,7 @@ import sendMessageAnimation from '../../../assets/loittie/sms.json';
 import contactAnimation from '../../../assets/loittie/contact.json';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaGithub, FaLinkedin, FaFacebook } from 'react-icons/fa';
 import Lottie from 'react-lottie';
+import { FaSquareXTwitter } from 'react-icons/fa6';
 
 const Contact = () => {
 
@@ -104,16 +105,20 @@ const Contact = () => {
                         </div>
                     </div>
 
+
                     {/* Social Media Links */}
                     <div className="flex gap-4 mt-6">
-                        <a href="https://github.com/yourgithub" target="_blank" rel="noopener noreferrer">
-                            <FaGithub size={30} className="hover:text-gray-400 transition" />
+                        <a href="https://www.linkedin.com/in/salman-shaid-93001734b/" className="hover:text-blue-600 transition duration-300">
+                            <FaLinkedin size={32} />
                         </a>
-                        <a href="https://linkedin.com/in/yourlinkedin" target="_blank" rel="noopener noreferrer">
-                            <FaLinkedin size={30} className="hover:text-gray-400 transition" />
+                        <a href="https://github.com/Salman-Shaid?tab=repositories" className="hover:text-gray-500 transition duration-300">
+                            <FaGithub size={32} />
                         </a>
-                        <a href="https://facebook.com/yourfacebook" target="_blank" rel="noopener noreferrer">
-                            <FaFacebook size={30} className="hover:text-gray-400 transition" />
+                        <a href="https://www.facebook.com/Salman.Shaid.Sani" className="hover:text-blue-500 transition duration-300">
+                            <FaFacebook size={32} />
+                        </a>
+                        <a href="https://x.com/Salmanshaid6" className="hover:text-black transition duration-300">
+                            <FaSquareXTwitter size={32} />
                         </a>
                     </div>
 
