@@ -144,6 +144,7 @@ const Contact = () => {
                                 name="name"
                                 value={formData.name}
                                 onChange={handleChange}
+                                required
                             />
                         </div>
                         <div className="mb-4">
@@ -155,6 +156,7 @@ const Contact = () => {
                                 name="email"
                                 value={formData.email}
                                 onChange={handleChange}
+                                
                             />
                         </div>
                         <div className="mb-4">
@@ -166,11 +168,21 @@ const Contact = () => {
                                 name="message"
                                 value={formData.message}
                                 onChange={handleChange}
+                                required
                             ></textarea>
                         </div>
-                        <button type="submit" className="w-full bg-gray-800 text-white py-3 rounded-lg hover:bg-gray-700 transition">
-                            Send Message
+                        <button
+                            type="submit"
+                            className="group relative w-full inline-flex items-center justify-center overflow-hidden rounded-full border border-blue-500 bg-transparent px-6 py-3 text-blue-400 shadow-md transition-all duration-300 ease-in-out hover:scale-105 hover:border-blue-700"
+                        >
+                            <span className="absolute inset-0 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></span>
+                            <span className="absolute -left-full top-0 h-full w-full transform skew-x-[-20deg] bg-white opacity-10 group-hover:left-full group-hover:transition-all group-hover:duration-1000"></span>
+                            <span className="relative text-sm font-semibold tracking-wide group-hover:text-white">
+                                Send Message
+                            </span>
                         </button>
+
+
                     </form>
                 </div>
             </div>

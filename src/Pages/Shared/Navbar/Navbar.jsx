@@ -28,24 +28,30 @@ const Navbar = () => {
         };
     }, []);
 
-    const sections = ["home", "skills", "about", "projects", "contact"];
+    const sections = ["home", "skills",  "projects", "about","contact"];
 
     return (
         <div
             className={`fixed top-0 left-0 right-0 z-10 transition-all duration-300 ${isScrolled
-                ? "bg-[#252734]/60 backdrop-blur-md shadow-md"
-                : "bg-[#252734]"
+                ? "bg-[#252734]/60 backdrop-blur-sm shadow-md"
+                : ""
                 }`}
         >
             <div className="navbar container mx-auto flex justify-between items-center px-4 py-2">
                 {/* Logo */}
                 <div className="relative inline-block font-extrabold text-white md:text-4xl sm:text-2xl lg:text-4xl">
-                    <span className="absolute top-1 left-1 text-blue-800 opacity-70 -z-10">SALMAN</span>
+                    {/* Background Shadow with subtle float animation */}
+                    <span className="absolute top-1 left-1 text-blue-800 opacity-70 -z-10 animate-[float_3s_ease-in-out_infinite]">
+                        SALMAN
+                    </span>
+
+                    {/* Foreground main text */}
                     <a href="/" className="relative z-10">SALMAN</a>
                 </div>
 
+
                 {/* Desktop Menu */}
-                <ul className="hidden lg:flex space-x-6 text-white">
+                <ul className="hidden lg:flex space-x-10 text-white">
                     {sections.map((section) => (
                         <li key={section}>
                             <Link
@@ -54,8 +60,8 @@ const Navbar = () => {
                                 duration={500}
                                 offset={-70}
                                 spy={true}
-                                className={`hover:text-gray-400 cursor-pointer pb-1 transition-all ${activeSection === section
-                                    ? "border-b-2 border-dotted border-[#3B5692] text-[#3D5778]"
+                                className={`hover:text-blue-400 cursor-pointer pb-1 transition-all ${activeSection === section
+                                    ? "border-b-7 border-dotted border-blue-400 text-blue-400"
                                     : ""
                                     }`}
                             >
@@ -70,7 +76,7 @@ const Navbar = () => {
                     <Link to="contact" smooth={true} duration={500} offset={-70} spy={true}>
                         <button
                             className={`group relative inline-flex items-center justify-center overflow-hidden rounded-full border border-blue-400 bg-transparent px-8 py-3 text-blue-400 shadow-md transition-all duration-300 ease-in-out hover:scale-105 hover:border-blue-700
-    ${activeSection === "contact" ? "border-blue-400 text-blue-400" : ""}`}
+                          ${activeSection === "contact" ? "border-blue-400 text-blue-400" : ""}`}
                         >
                             {/* Gradient Overlay on Hover */}
                             <span className="absolute inset-0 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></span>
@@ -105,7 +111,7 @@ const Navbar = () => {
                             offset={-70}
                             spy={true}
                             className={`block cursor-pointer hover:text-gray-400 ${activeSection === section
-                                ? "border-b-2 border-dotted border-[#3B5692] text-[#3D5778]"
+                                ? "border-b-2 border-dotted border-blue-400 text-blue-400"
                                 : ""
                                 }`}
                             onClick={() => setMenuOpen(false)}

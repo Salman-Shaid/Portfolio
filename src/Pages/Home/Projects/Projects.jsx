@@ -40,7 +40,7 @@ const projects = [
 
 const Projects = () => {
     return (
-        <div id="projects" className='container mx-auto p-6'>
+        <div id="projects" className='container mx-auto'>
             <h1 className='text-5xl font-bold text-center mt-20'>My Recent 3 Projects</h1>
 
             <Swiper
@@ -71,12 +71,23 @@ const Projects = () => {
 
                                 {/* View More Button */}
                                 <Link
-                                    to={project.link} // Use Link component for routing
-                                    className='btn btn-outline py-4 border-gray-400 rounded-full flex items-center justify-center w-full'
+                                    to={project.link} 
                                 >
-                                    <FaExternalLinkAlt size={25} />
-                                    <span className='px-2'>View More</span>
+                                    <button className="group relative w-full inline-flex items-center justify-center overflow-hidden rounded-full border border-blue-500 bg-transparent px-6 py-3 text-blue-400 shadow-md transition-all duration-300 ease-in-out hover:scale-105 hover:border-blue-700">
+                                        {/* Hover Gradient Overlay */}
+                                        <span className="absolute inset-0 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></span>
+
+                                        {/* Shimmer Line */}
+                                        <span className="absolute -left-full top-0 h-full w-full transform skew-x-[-20deg] bg-white opacity-10 group-hover:left-full group-hover:transition-all group-hover:duration-1000"></span>
+
+                                        {/* Text & Icon */}
+                                        <span className="relative flex items-center gap-2 text-sm font-semibold tracking-wide group-hover:text-white">
+                                            Get Resume
+                                            <FaExternalLinkAlt size={25} className="transition-transform duration-200 group-hover:-translate-y-0.5" />
+                                        </span>
+                                    </button>
                                 </Link>
+
                             </div>
                         </div>
                     </SwiperSlide>

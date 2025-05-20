@@ -13,7 +13,7 @@ import { TiHtml5 } from 'react-icons/ti';
 
 const MySkills = () => {
     return (
-        <div id="skills" className="p-6 container mx-auto">
+        <div id="skills" className=" container mx-auto">
             <h1 className="text-5xl mt-20 font-bold text-center mb-8">My Skills</h1>
             <div className='my-8'>
                 <Marquee className='' gradient={false} speed={50}>

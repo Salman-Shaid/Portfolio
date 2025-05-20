@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import imgC1 from '../../../assets/courier-z-screenshot/Screenshot 2025-02-05 174436.png';
 import imgC2 from '../../../assets/2-screenshot/Screenshot 2025-02-05 180541.png';
 import imgC3 from '../../../assets/3-screenshot/Screenshot 2025-02-05 175528.png';
+import { FaExternalLinkAlt } from 'react-icons/fa';
 
 const ViewMore = () => {
     const { id } = useParams(); // Get the project id from the URL
@@ -79,8 +80,8 @@ const ViewMore = () => {
             <img src={project.image} alt={project.title} className='w-full h-full object-cover rounded-xl mb-6' />
             <h1 className='text-5xl text-white'>Name : {project.title}</h1>
             <h3 className='text-3xl text-white mb-4'>Category : {project.subtitle}</h3>
-            
-            
+
+
             <p className='text-white text-lg mb-6'>{project.description}</p>
 
             <div className='space-y-4'>
@@ -113,20 +114,58 @@ const ViewMore = () => {
                     href={project.liveLink}
                     target='_blank'
                     rel='noopener noreferrer'
-                    className='btn btn-outline py-4 border-gray-400 rounded-full w-full mb-4'
+                    className=''
                 >
-                    View Project Live
+                    <button className="group mb-6 relative w-full inline-flex items-center justify-center overflow-hidden rounded-full border border-blue-500 bg-transparent px-6 py-3 text-blue-400 shadow-md transition-all duration-300 ease-in-out hover:scale-105 hover:border-blue-700">
+                        {/* Hover Gradient Overlay */}
+                        <span className="absolute inset-0 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></span>
+
+                        {/* Shimmer Line */}
+                        <span className="absolute -left-full top-0 h-full w-full transform skew-x-[-20deg] bg-white opacity-10 group-hover:left-full group-hover:transition-all group-hover:duration-1000"></span>
+
+                        {/* Text & Icon */}
+                        <span className="relative flex items-center gap-2 text-sm font-semibold tracking-wide group-hover:text-white">
+                            View Project Live
+                            <FaExternalLinkAlt size={25} className="transition-transform duration-200 group-hover:-translate-y-0.5" />
+                        </span>
+                    </button>
+
                 </a>
                 <a
                     href={project.githubLink}
                     target='_blank'
                     rel='noopener noreferrer'
-                    className='btn btn-outline  py-4 border-gray-400 rounded-full w-full'
+                    className=''
                 >
-                    View GitHub Repository
+                    <button className="group relative w-full inline-flex items-center justify-center overflow-hidden rounded-full border border-blue-500 bg-transparent px-6 py-3 text-blue-400 shadow-md transition-all duration-300 ease-in-out hover:scale-105 hover:border-blue-700">
+                        {/* Hover Gradient Overlay */}
+                        <span className="absolute inset-0 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></span>
+
+                        {/* Shimmer Line */}
+                        <span className="absolute -left-full top-0 h-full w-full transform skew-x-[-20deg] bg-white opacity-10 group-hover:left-full group-hover:transition-all group-hover:duration-1000"></span>
+
+                        {/* Text & Icon */}
+                        <span className="relative flex items-center gap-2 text-sm font-semibold tracking-wide group-hover:text-white">
+                            View GitHub Repository
+                            <FaExternalLinkAlt size={25} className="transition-transform duration-200 group-hover:-translate-y-0.5" />
+                        </span>
+                    </button>
+
                 </a>
                 <Link to="/">
-                <button className='btn my-4 bg-green-600 btn-outline py-4 border-gray-400 rounded-full w-full'> Back To Home</button>
+                    <button className="group relative w-full inline-flex items-center justify-center overflow-hidden rounded-full border border-green-600 bg-transparent px-6 py-4 text-green-500 shadow-md transition-all duration-300 ease-in-out hover:scale-105 hover:border-green-700 mt-6">
+                        {/* Hover Gradient Overlay */}
+                        <span className="absolute inset-0 bg-gradient-to-r from-green-500 via-green-600 to-green-700 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></span>
+
+                        {/* Shimmer Line */}
+                        <span className="absolute -left-full top-0 h-full w-full transform skew-x-[-20deg] bg-white opacity-10 group-hover:left-full group-hover:transition-all group-hover:duration-1000"></span>
+
+                        {/* Button Text */}
+                        <span className="relative text-sm font-bold tracking-wide group-hover:text-white">
+                            Back To Home
+                        </span>
+                    </button>
+
                 </Link>
             </div>
         </div>

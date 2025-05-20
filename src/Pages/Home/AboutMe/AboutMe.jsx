@@ -19,13 +19,13 @@ const AboutMe = () => {
     }, []); // Runs only once when the component mounts
 
     return (
-        <div id="about" className="flex container mx-auto items-center justify-center p-6 mt-16">
+        <div id="about" className="flex container mx-auto items-center justify-center mt-16">
             <div className="grid grid-cols-1 md:grid-cols-3 w-full bg-[#252734] shadow-xl rounded-xl p-8 relative">
                 <div className="col-span-1 mb-6 md:mb-0">
                     <img
                         src={img} // Banner image
                         alt="Banner"
-                        className=" w-full py-12 px-2 h-full object-cover rounded-lg" // Image with shadow and responsive
+                        className=" w-full py-12 px-2 h-full object-cover rounded-full" // Image with shadow and responsive
                     />
 
                 </div>
